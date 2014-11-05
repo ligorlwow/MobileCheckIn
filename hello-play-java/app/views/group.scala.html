@@ -1,0 +1,24 @@
+@(formGroup: Form[Group])
+
+@main("Welcome to Play Framework") {
+
+    <div class="well">
+    @helper.form(action = routes.GroupController.submit()) {
+
+        <table>
+            <tr>
+                <td>Название группы:</td>
+                <td><input type="text" name="name" value="Hello world"></td>
+            </tr>
+            <tr>
+                <td>Удалена:</td>
+                <td><input type="checkbox" name="deleted"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="Сохранить">
+    }
+
+    </div>
+
+}
